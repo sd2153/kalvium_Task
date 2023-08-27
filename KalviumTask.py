@@ -1,6 +1,6 @@
 from flask import Flask, render_template, jsonify
 import re
-
+import sqlite3
 app = Flask(__name__)
 
     
@@ -19,7 +19,7 @@ def storing_history():
 storing_history()
 @app.route("/")
 def home():
-    return "Welcome to Maths Server"
+    return render_template("index.html")
 
 @app.route("/<path:expression>", methods=['GET'])
 def calculate(expression):

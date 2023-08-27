@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maths Server</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        header {
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            margin-bottom: 1rem;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 1rem;
+            padding: 1rem;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        pre {
+            background-color: #f4f4f4;
+            padding: 1rem;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 2rem;
+        }
+
+        .example {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .example code {
+            display: block;
+            padding: 0.5rem;
+            background-color: #f4f4f4;
+            border-radius: 3px;
+        }
+
+        .example p {
+            margin: 0;
+            font-size: 1.2rem;
+            color: #333;
+        }
+
+        .example code {
+            font-size: 1.2rem;
+            line-height: 1.5;
+        }
+
+        .example .divider {
+            margin-top: 1rem;
+            border-top: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Maths Server</h1>
+    </header>
+    <div class="container">
+        <p>This is a simple maths server that can perform basic operations like addition, subtraction, multiplication, division, and exponentiation.</p>
+        <h2>Endpoints</h2>
+        <ul class="example-list">
+            <li><code>/</code>: This is the home page. It lists all the available endpoints.</li>
+            <li><code>/<em>expression</em></code>: This endpoint evaluates the given expression. The expression can contain numbers, operators, and functions.</li>
+            <li><code>/history</code>: This endpoint returns the history of all the calculations that have been performed.</li>
+        </ul>
+        <h2>Examples</h2>
+        <div class="example">
+            <p>To add 2 and 3, you can use the following endpoint:</p>
+            <code>USE= /2/plus/3<br>answer = 5</code>
+        </div>
+        <div class="example">
+            <p>To subtract 5 from 10, you can use the following endpoint:</p>
+            <code>USE= /10/minus/5<br>answer = 5</code>
+        </div>
+        <div class="example">
+            <p>To multiply 2 and 3, you can use the following endpoint:</p>
+            <code>USE= /2/into/3<br>answer = 6</code>
+        </div>
+        <div class="example">
+            <p>To divide 10 by 2, you can use the following endpoint:</p>
+            <code>USE= /10/dividedby/2<br>answer = 5</code>
+        </div>
+        <div class="example">
+            <p>To raise 2 to the power of 3, you can use the following endpoint:</p>
+            <code>USE= /2/power/3<br>answer = 8</code>
+        </div>
+        <div class="example">
+            <p>To view previous 20 calculations:</p>
+            <pre><code>USE= /history
+{question = 2+3
+answer = 5}
+{question = 10-5
+answer = 5}
+{question = 2*3
+answer = 6}
+{question = 10/2
+answer = 5}
+{question = 2**3
+answer = 8}</code></pre>
+        </div>
+        <div class="divider"></div>
+    </div>
+</body>
+</html>
